@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>581</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(36, 42, 56);
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QToolTip { 
+  background-color: rgb(223, 103, 90);
+  color: rgb(36, 42, 56); 
+  border: black solid 1px
+}</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1001</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QCheckBox" name="signalsBtn">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start/Stop acquisition of ECG and Breath signals&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox
+{
+  background-color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 10px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QCheckBox::indicator
+{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 2px;
+}
+
+QCheckBox::indicator::checked
+{
+	border-image: url(:/Icons/GUI_Resources/check.svg);
+}
+
+QCheckBox::hover
+{
+  background-color:rgb(255, 116, 103);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 10px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QCheckBox::disabled
+{
+  background-color:rgb(36, 42, 56);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 10px;
+  border-color: rgb(0, 0, 0);
+  padding: 1px;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="Resource_file.qrc">
+           <normaloff>:/Icons/GUI_Resources/play.svg</normaloff>:/Icons/GUI_Resources/play.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="vpwvBtn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start/Stop vPWV measurement routine&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox
+{
+  background-color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 10px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QCheckBox::indicator
+{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 2px;
+}
+
+QCheckBox::indicator::checked
+{
+	border-image: url(:/Icons/GUI_Resources/check.svg);
+}
+
+QCheckBox::hover
+{
+  background-color:rgb(255, 116, 103);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 10px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QCheckBox::disabled
+{
+  background-color:rgb(36, 42, 56);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 10px;
+  border-color: rgb(0, 0, 0);
+  padding: 1px;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="Resource_file.qrc">
+           <normaloff>:/Icons/GUI_Resources/activity.svg</normaloff>:/Icons/GUI_Resources/activity.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="triggerBtn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Single vPWV measurement&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+  background-color: rgb(223, 103, 90);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QPushButton::hover
+{
+  background-color:rgb(255, 116, 103);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QPushButton::pressed
+{
+  background-color:rgb(166, 75, 67);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QPushButton::disabled
+{
+  background-color:rgb(36, 42, 56);
+  color:rgb(223, 103, 90);
+  border-width: 0px;
+  border-color: rgb(0, 0, 0);
+  padding: 1px;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="Resource_file.qrc">
+           <normaloff>:/Icons/GUI_Resources/zap.svg</normaloff>:/Icons/GUI_Resources/zap.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="dopplerBtn">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start/Stop acquisition of Doppler and Pressure signals&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox
+{
+  background-color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 10px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QCheckBox::indicator
+{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 2px;
+}
+
+QCheckBox::indicator::checked
+{
+	border-image: url(:/Icons/GUI_Resources/check.svg);
+}
+
+QCheckBox::hover
+{
+  background-color:rgb(255, 116, 103);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 10px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QCheckBox::disabled
+{
+  background-color:rgb(36, 42, 56);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 10px;
+  border-color: rgb(0, 0, 0);
+  padding: 1px;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="Resource_file.qrc">
+           <normaloff>:/Icons/GUI_Resources/tv.svg</normaloff>:/Icons/GUI_Resources/tv.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="userMarkersBtn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Put a marker at the present timestamp&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+  background-color: rgb(223, 103, 90);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QPushButton::hover
+{
+  background-color:rgb(255, 116, 103);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QPushButton::pressed
+{
+  background-color:rgb(166, 75, 67);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QPushButton::disabled
+{
+  background-color:rgb(36, 42, 56);
+  color:rgb(223, 103, 90);
+  border-width: 0px;
+  border-color: rgb(0, 0, 0);
+  padding: 1px;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="Resource_file.qrc">
+           <normaloff>:/Icons/GUI_Resources/flag.svg</normaloff>:/Icons/GUI_Resources/flag.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="TitleLabel">
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(131, 152, 203);</string>
+         </property>
+         <property name="text">
+          <string>Press play to start</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="saveBtn">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start/Stop acquisition of ECG and Breath signals&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox
+{
+  background-color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 10px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QCheckBox::indicator
+{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 2px;
+}
+
+QCheckBox::indicator::checked
+{
+	border-image: url(:/Icons/GUI_Resources/check.svg);
+}
+
+QCheckBox::hover
+{
+  background-color:rgb(255, 116, 103);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 10px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QCheckBox::disabled
+{
+  background-color:rgb(36, 42, 56);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 10px;
+  border-color: rgb(0, 0, 0);
+  padding: 1px;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="Resource_file.qrc">
+           <normaloff>:/Icons/GUI_Resources/save.svg</normaloff>:/Icons/GUI_Resources/save.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="settingsBtn">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+  background-color: rgb(223, 103, 90);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QPushButton::hover
+{
+  background-color:rgb(255, 116, 103);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QPushButton::pressed
+{
+  background-color:rgb(166, 75, 67);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QPushButton::disabled
+{
+  background-color:rgb(36, 42, 56);
+  color:rgb(223, 103, 90);
+  border-width: 0px;
+  border-color: rgb(0, 0, 0);
+  padding: 1px;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="Resource_file.qrc">
+           <normaloff>:/Icons/GUI_Resources/settings.svg</normaloff>:/Icons/GUI_Resources/settings.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="fullscreenBtn">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle fullscreen mode&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+  background-color: rgb(223, 103, 90);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QPushButton::hover
+{
+  background-color:rgb(255, 116, 103);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QPushButton::pressed
+{
+  background-color:rgb(166, 75, 67);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QPushButton::disabled
+{
+  background-color:rgb(36, 42, 56);
+  color:rgb(223, 103, 90);
+  border-width: 0px;
+  border-color: rgb(0, 0, 0);
+  padding: 1px;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="Resource_file.qrc">
+           <normaloff>:/Icons/GUI_Resources/maximize-2.svg</normaloff>
+           <normalon>:/Icons/GUI_Resources/minimize-2.svg</normalon>:/Icons/GUI_Resources/maximize-2.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="exitBtn">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Exit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+  background-color: rgb(223, 103, 90);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QPushButton::hover
+{
+  background-color:rgb(255, 116, 103);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QPushButton::pressed
+{
+  background-color:rgb(166, 75, 67);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+QPushButton::disabled
+{
+  background-color:rgb(36, 42, 56);
+  color:rgb(223, 103, 90);
+  border-width: 0px;
+  border-color: rgb(0, 0, 0);
+  padding: 1px;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="Resource_file.qrc">
+           <normaloff>:/Icons/GUI_Resources/power.svg</normaloff>:/Icons/GUI_Resources/power.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="SignalsPlotter" name="plot1"/>
+     </item>
+     <item>
+      <widget class="SignalsPlotter" name="plot2"/>
+     </item>
+     <item>
+      <widget class="vpwvPlotter" name="plot3"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SignalsPlotter</class>
+   <extends>QGraphicsView</extends>
+   <header>Plotter.h</header>
+  </customwidget>
+  <customwidget>
+   <class>vpwvPlotter</class>
+   <extends>QGraphicsView</extends>
+   <header>Plotter.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="Resource_file.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>signalsBtn</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>vpwvBtn</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>37</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>95</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>signalsBtn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>userMarkersBtn</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>37</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>652</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>signalsBtn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>triggerBtn</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>37</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>142</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>vpwvBtn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>triggerBtn</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>94</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>141</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>signalsBtn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>exitBtn</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>37</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1002</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exitBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1002</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>signalsBtn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>fullscreenBtn</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>37</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>963</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>signalsBtn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dopplerBtn</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>37</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>188</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dopplerBtn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>signalsBtn</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>188</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>37</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dopplerBtn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>triggerBtn</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>188</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>141</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>signalsBtn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>saveBtn</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>37</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>865</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dopplerBtn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>saveBtn</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>188</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>865</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

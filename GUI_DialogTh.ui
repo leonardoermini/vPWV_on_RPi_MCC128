@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogThreshold</class>
+ <widget class="QDialog" name="DialogThreshold">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>576</width>
+    <height>330</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Inter</family>
+    <pointsize>30</pointsize>
+    <weight>9</weight>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(36, 42, 56);
+color: rgb(223, 103, 90);
+font: 75 30pt &quot;Inter&quot;;</string>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <widget class="QPushButton" name="uploadBtn">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>240</y>
+     <width>78</width>
+     <height>74</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+  background-color: rgb(223, 103, 90);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 5px;
+  icon: url(:/Icons/GUI_Resources/upload.svg);
+  qproperty-iconSize: 60px;
+}
+
+QPushButton::hover
+{
+  background-color:rgb(255, 116, 103);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 5px;
+}
+
+QPushButton::pressed
+{
+  background-color:rgb(166, 75, 67);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 5px;
+}
+
+QPushButton::disabled
+{
+  background-color:rgb(36, 42, 56);
+  color:rgb(223, 103, 90);
+  border-width: 0px;
+  border-color: rgb(0, 0, 0);
+  padding: 5px;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="Resource_file.qrc">
+     <normaloff>:/Icons/GUI_Resources/upload.svg</normaloff>:/Icons/GUI_Resources/upload.svg</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>20</y>
+     <width>542</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QDoubleSpinBox" name="ecgSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Inter</family>
+          <pointsize>30</pointsize>
+          <weight>9</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QDoubleSpinBox
+{
+  background-color: rgb(36, 42, 56);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 1px;
+}
+
+QDoubleSpinBox::up-button {
+	background-color: rgb(223, 103, 90);
+	image: url(:/Icons/GUI_Resources/chevron-up.svg);
+	width: 40px;
+  	border-style: solid;
+  	border-width: 2px;
+  	border-radius: 5px;
+  	border-color: rgb(0, 0, 0);
+}
+
+QDoubleSpinBox::up-button:hover {
+	background-color: rgb(255, 116, 103);
+}
+
+QDoubleSpinBox::up-button:pressed {
+	background-color: rgb(157, 71, 63);
+}
+
+QDoubleSpinBox::up-button:disabled {
+	background-color: rgb(93, 93, 93);
+}
+
+QDoubleSpinBox::down-button {
+	background-color: rgb(223, 103, 90);
+	image: url(:/Icons/GUI_Resources/chevron-down.svg);
+	width: 40px;
+  	border-style: solid;
+  	border-width: 2px;
+  	border-radius: 5px;
+  	border-color: rgb(0, 0, 0);
+}
+
+QDoubleSpinBox::down-button:hover {
+	background-color: rgb(255, 116, 103);
+}
+
+QDoubleSpinBox::down-button:pressed {
+	background-color: rgb(157, 71, 63);
+}
+
+QDoubleSpinBox::down-button:disabled {
+	background-color: rgb(93, 93, 93);
+}
+
+QDoubleSpinBox::disabled
+{
+  color: rgb(93, 93, 93);
+}</string>
+        </property>
+        <property name="minimum">
+         <double>-99.989999999999995</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="inflationSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Inter</family>
+          <pointsize>30</pointsize>
+          <weight>9</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QSpinBox
+{
+  background-color: rgb(36, 42, 56);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 1px;
+}
+
+QSpinBox::up-button {
+	background-color: rgb(223, 103, 90);
+	image: url(:/Icons/GUI_Resources/chevron-up.svg);
+	width: 40px;
+  	border-style: solid;
+  	border-width: 2px;
+  	border-radius: 5px;
+  	border-color: rgb(0, 0, 0);
+}
+
+QSpinBox::up-button:hover {
+	background-color: rgb(255, 116, 103);
+}
+
+QSpinBox::up-button:pressed {
+	background-color: rgb(157, 71, 63);
+}
+
+QSpinBox::up-button:disabled {
+	background-color: rgb(93, 93, 93);
+}
+
+QSpinBox::down-button {
+	background-color: rgb(223, 103, 90);
+	image: url(:/Icons/GUI_Resources/chevron-down.svg);
+	width: 40px;
+  	border-style: solid;
+  	border-width: 2px;
+  	border-radius: 5px;
+  	border-color: rgb(0, 0, 0);
+}
+
+QSpinBox::down-button:hover {
+	background-color: rgb(255, 116, 103);
+}
+
+QSpinBox::down-button:pressed {
+	background-color: rgb(157, 71, 63);
+}
+
+QSpinBox::down-button:disabled {
+	background-color: rgb(93, 93, 93);
+}
+
+QSpinBox::disabled
+{
+  color: rgb(93, 93, 93);
+}</string>
+        </property>
+        <property name="maximum">
+         <number>999</number>
+        </property>
+        <property name="singleStep">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>100</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="delaySpinBox">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Inter</family>
+          <pointsize>30</pointsize>
+          <weight>9</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QSpinBox
+{
+  background-color: rgb(36, 42, 56);
+  color: rgb(223, 103, 90);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  padding: 1px;
+}
+
+QSpinBox::up-button {
+	background-color: rgb(223, 103, 90);
+	image: url(:/Icons/GUI_Resources/chevron-up.svg);
+	width: 40px;
+  	border-style: solid;
+  	border-width: 2px;
+  	border-radius: 5px;
+  	border-color: rgb(0, 0, 0);
+}
+
+QSpinBox::up-button:hover {
+	background-color: rgb(255, 116, 103);
+}
+
+QSpinBox::up-button:pressed {
+	background-color: rgb(157, 71, 63);
+}
+
+QSpinBox::up-button:disabled {
+	background-color: rgb(93, 93, 93);
+}
+
+QSpinBox::down-button {
+	background-color: rgb(223, 103, 90);
+	image: url(:/Icons/GUI_Resources/chevron-down.svg);
+	width: 40px;
+  	border-style: solid;
+  	border-width: 2px;
+  	border-radius: 5px;
+  	border-color: rgb(0, 0, 0);
+}
+
+QSpinBox::down-button:hover {
+	background-color: rgb(255, 116, 103);
+}
+
+QSpinBox::down-button:pressed {
+	background-color: rgb(157, 71, 63);
+}
+
+QSpinBox::down-button:disabled {
+	background-color: rgb(93, 93, 93);
+}
+
+QSpinBox::disabled
+{
+  color: rgb(93, 93, 93);
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+        <property name="maximum">
+         <number>9999</number>
+        </property>
+        <property name="singleStep">
+         <number>10</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Inter</family>
+          <pointsize>30</pointsize>
+          <weight>9</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>ECG threshold</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Inter</family>
+          <pointsize>30</pointsize>
+          <weight>9</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Inflation Time</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Inter</family>
+          <pointsize>30</pointsize>
+          <weight>9</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>R-wave Delay</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="Resource_file.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>uploadBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogThreshold</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>303</x>
+     <y>91</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>183</x>
+     <y>75</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

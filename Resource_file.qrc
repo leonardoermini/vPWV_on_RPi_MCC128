@@ -1,0 +1,25 @@
+<RCC>
+  <qresource prefix="Icons">
+    <file>GUI_Resources/save.svg</file>
+    <file>GUI_Resources/search.svg</file>
+    <file>GUI_Resources/settings.svg</file>
+    <file>GUI_Resources/eye.svg</file>
+    <file>GUI_Resources/tv.svg</file>
+    <file>GUI_Resources/chevron-down.svg</file>
+    <file>GUI_Resources/chevron-up.svg</file>
+    <file>GUI_Resources/arrow-down.svg</file>
+    <file>GUI_Resources/arrow-up.svg</file>
+    <file>GUI_Resources/maximize-2.svg</file>
+    <file>GUI_Resources/minimize-2.svg</file>
+    <file>GUI_Resources/power.svg</file>
+    <file>GUI_Resources/activity.svg</file>
+    <file>GUI_Resources/arrow-right-circle.svg</file>
+    <file>GUI_Resources/check.svg</file>
+    <file>GUI_Resources/flag.svg</file>
+    <file>GUI_Resources/play.svg</file>
+    <file>GUI_Resources/tool.svg</file>
+    <file>GUI_Resources/upload.svg</file>
+    <file>GUI_Resources/zap.svg</file>
+    <file>GUI_Resources/check.svg</file>
+  </qresource>
+</RCC>
