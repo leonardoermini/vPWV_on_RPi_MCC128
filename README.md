@@ -1,4 +1,4 @@
-# vPWV_on_RPi_&_MCC128
+# vPWV_on_RPi_MCC128
 A portable device for venous Pulse Wave Velocity measurement
 
 The present code is intended to be used on a Raspberry Pi 4 B+ (Processor: Broadcom BCM2711 quad-core 64 bit ARM Cortex-A72, 1.5 GHz; RAM: 4 GB) equipped with MCC128 DAQ HAT used to acquire, sequentially, the following analogic signals:
